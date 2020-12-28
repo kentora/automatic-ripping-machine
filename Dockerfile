@@ -10,6 +10,9 @@ ENV RUN_AS_USER=true
 ENV UID=1000
 ENV GID=1000
 
+# override at runtime to change makemkv key
+ENV MAKEMKV_APP_KEY=
+
 # local apt/deb proxy for builds
 ARG APT_PROXY=
 RUN if [ -n "${APT_PROXY}" ] ; then \
